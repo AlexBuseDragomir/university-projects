@@ -1,4 +1,4 @@
-# Traveling-Salesman-Problem
+# Traveling-Salesman-Problem-RBFS-A*
 
 College project, not complete, solving the Traveling Salesman Problem by using C++ and Java.
 
