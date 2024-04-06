@@ -1,3 +1,5 @@
+# Plant Collection Manager
+
 One of my first programming projects back in college, written in the C language, making use of input and output files.
 It is handling simple records that represent decorative plants.
 
