@@ -1,4 +1,4 @@
-Santa Claus Workshop Project - Java Multithreading
+# Santa Claus Workshop Project - Java Multithreading
 
 I. Christmas is just around the corner! Santa Klaus and his staff (elves and reindeers) are preparing for
 another wonderful Christmas that brings joy and gifts to all children around the world.
