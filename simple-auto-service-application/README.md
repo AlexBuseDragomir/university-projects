@@ -1,3 +1,5 @@
+# Simple Auto Service Application
+
 A simple college Python program that emulates an auto service.
 
 REQUIREMENTS: A non-stop auto service unit has five workstations for maintenance and/or repair work on cars. Each workstation is managed by an auto mechanic and allows for a variety of six types of services (not necessarily the same at all repair stations), each type of service having a predefined execution time.
