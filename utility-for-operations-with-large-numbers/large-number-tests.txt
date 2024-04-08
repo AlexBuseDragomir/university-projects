@@ -1,0 +1,22 @@
+Test 11
+Number 1 :  539657621241238
+Number 2 :  27855187502608
+Scalar value : 234242
+Sum :  567512808743846                    
+Diference :  511802433738630
+Product :  15032264226886094298322148704
+Quotient :  2303846540
+Remainder :  18558
+Floor of square root :  23230532
+
+
+Test 12
+Number 1 :  18516461058209033943
+Number 2 :  674526649250766752780
+Scalar value : 76
+Sum :  693043110308975786723
+Diference : EROARE!
+Product :  12489846433576046419643449011346909611540
+Quotient :   243637645502750446
+Remainder :  47
+Floor of square root :  4303075767
