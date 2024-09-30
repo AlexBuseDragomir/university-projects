@@ -1,0 +1,11 @@
+*.iml
+Graph-Drawing-Application/.idea/misc.xml
+Graph-Drawing-Application/.idea/encodings.xml
+Graph-Drawing-Application/.idea/compiler.xml
+Graph-Drawing-Application/.idea/inspectionProfiles/Project_Default.xml
+Graph-Drawing-Application/.idea/dictionaries/alexa.xml
+*.jar
+*.class
+*.properties
+*.lst
+Graph-Drawing-Application/.idea/workspace.xml
