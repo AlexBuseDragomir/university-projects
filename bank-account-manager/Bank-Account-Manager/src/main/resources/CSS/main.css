@@ -1,0 +1,15 @@
+/*
+* Side-Buttons Properties
+* Author: Evohunt
+*/
+.buttonLabel {
+    -fx-background-color: #1b1a1a;
+}
+
+.buttonLabel:hover {
+    -fx-background-color: #2b2929;
+}
+
+.buttonLabel:pressed {
+    -fx-background-color: #403d3d;
+}

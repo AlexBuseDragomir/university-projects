@@ -1,0 +1,12 @@
+*.lst
+
+./Bank-Account-Manager/target/
+
+.idea/
+
+*.jar
+
+*.properties
+
+*.iml
+*.kotlin_module

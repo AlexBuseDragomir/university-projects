@@ -1,0 +1,107 @@
+/*
+* Button Properties
+* Author: Evohunt
+*/
+.loginButton {
+    -fx-border-color: white;
+    -fx-border-radius: 4;
+}
+
+.loginButton:hover {
+    -fx-background-color: #2b2929;
+}
+
+.loginButton:pressed {
+    -fx-background-color: #403d3d;
+}
+
+.registerButton {
+    -fx-border-color: white;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-background-color: #0acb2e;
+}
+
+.registerButton:hover {
+    -fx-background-color: #0ae032;
+}
+
+.registerButton:pressed {
+    -fx-background-color: #0bf036;
+}
+
+.regularButton {
+    -fx-border-color: white;
+    -fx-border-radius: 4;
+}
+
+.regularButton:hover {
+    -fx-background-color: #2b2929;
+}
+
+.regularButton:pressed {
+    -fx-background-color: #403d3d;
+}
+
+.backButton {
+    -fx-background-radius: 6;
+    -fx-background-color: #cb1c1c;
+    -fx-border-color: white;
+    -fx-border-radius: 4;
+}
+
+.backButton:hover {
+    -fx-background-color: #de1818;
+}
+
+.backButton:pressed {
+    -fx-background-color: #e81b1b;
+}
+
+.createAccountButton {
+    -fx-border-color: white;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-background-color: #0acb2e;
+}
+
+.createAccountButton:hover {
+    -fx-background-color: #0ae032;
+}
+
+.createAccountButton:pressed {
+    -fx-background-color: #0bf036;
+}
+
+/*
+* SAVE BUTTON
+*/
+.saveButton {
+    -fx-border-color: #17c216;
+    -fx-border-radius: 4;
+}
+
+.saveButton:hover {
+    -fx-background-color: #2b2929;
+}
+
+.saveButton:pressed {
+    -fx-background-color: #403d3d;
+}
+
+/*
+* CANCEL BUTTON
+*/
+.cancelButton {
+    -fx-border-color: #cd1010;
+    -fx-border-radius: 4;
+}
+
+.cancelButton:hover {
+    -fx-background-radius: 4;
+    -fx-background-color: #2b2929;
+}
+
+.cancelButton:pressed {
+    -fx-background-color: #403d3d;
+}

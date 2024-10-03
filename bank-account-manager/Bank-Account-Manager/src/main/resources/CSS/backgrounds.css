@@ -1,0 +1,31 @@
+/*
+* Background Properties
+* Author: Evohunt
+*/
+.mainBackground {
+    -fx-background-color: #1b1a1a;
+}
+
+.sidePanel {
+    -fx-background-color: #413f3f;
+}
+
+.transactionPanel {
+    -fx-background-color: #413f3f;
+    -fx-background-radius: 4;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane {
+    -fx-background-color: #1b1a1a;
+}
+
+.popUpPane {
+    -fx-background-color: #1b1a1a;
+    -fx-border-color: WHITE;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
