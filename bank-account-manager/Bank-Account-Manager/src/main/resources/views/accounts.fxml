@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manager.controller.AccountsController">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <AnchorPane prefHeight="500.0" prefWidth="800.0" styleClass="mainBackground" stylesheets="@../CSS/backgrounds.css">
+            <children>
+                <Pane prefHeight="500.0" prefWidth="200.0" styleClass="sidePanel" stylesheets="@../CSS/backgrounds.css">
+                    <children>
+                        <Label fx:id="homeButton" alignment="CENTER" layoutY="125.0" onMouseClicked="#gotoHomePage" prefHeight="50.0" prefWidth="200.0" styleClass="buttonLabel" stylesheets="@../CSS/main.css" text="HOME" textFill="WHITE">
+                            <font>
+                                <Font name="Impact" size="28.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Label>
+                        <Label alignment="CENTER" layoutY="225.0" prefHeight="50.0" prefWidth="200.0" style="-fx-border-color: white;" styleClass="buttonLabel" stylesheets="@../CSS/main.css" text="ACCOUNTS" textFill="WHITE">
+                            <font>
+                                <Font name="Impact" size="28.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Label>
+                        <Label fx:id="transferButton" alignment="CENTER" layoutY="275.0" onMouseClicked="#gotoTransferPage" prefHeight="50.0" prefWidth="200.0" styleClass="buttonLabel" stylesheets="@../CSS/main.css" text="TRANSFER" textFill="WHITE">
+                            <font>
+                                <Font name="Impact" size="28.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Label>
+                        <Label fx:id="payButton" alignment="CENTER" layoutY="325.0" onMouseClicked="#gotoPayPage" prefHeight="50.0" prefWidth="200.0" styleClass="buttonLabel" stylesheets="@../CSS/main.css" text="PAY" textFill="WHITE">
+                            <font>
+                                <Font name="Impact" size="28.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Label>
+                        <Label fx:id="profileButton" alignment="CENTER" layoutY="175.0" onMouseClicked="#gotoProfilePage" prefHeight="50.0" prefWidth="200.0" styleClass="buttonLabel" stylesheets="@../CSS/main.css" text="PROFILE" textFill="WHITE">
+                            <font>
+                                <Font name="Impact" size="28.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Label>
+                        <Label fx:id="logoutButton" alignment="CENTER" layoutX="14.0" layoutY="14.0" onMouseClicked="#logoutUser" prefHeight="32.0" prefWidth="99.0" styleClass="cancelButton" stylesheets="@../CSS/buttons.css" text="LOGOUT" textFill="#b81212">
+                            <font>
+                                <Font name="Impact" size="20.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Label>
+                    </children>
+                </Pane>
+                <Label fx:id="createAccountButton" alignment="CENTER" layoutX="215.0" layoutY="14.0" onMouseClicked="#promptCreateAccount" prefHeight="40.0" prefWidth="212.0" styleClass="createAccountButton" stylesheets="@../CSS/buttons.css" text="CREATE ACCOUNT" textFill="WHITE">
+                    <font>
+                        <Font name="Impact" size="22.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Label>
+                <Pane fx:id="accountPane1" layoutX="225.0" layoutY="110.0" prefHeight="50.0" prefWidth="550.0" styleClass="transactionPanel" stylesheets="@../CSS/backgrounds.css" visible="false">
+                    <children>
+                        <Label fx:id="accountBalance1" alignment="CENTER_RIGHT" layoutX="196.0" layoutY="13.0" prefHeight="25.0" prefWidth="135.0" text="550.00" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="accountName1" layoutX="21.0" layoutY="13.0" prefHeight="25.0" prefWidth="166.0" text="BAT201903040100" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="accountCurrency1" layoutX="341.0" layoutY="13.0" prefHeight="25.0" prefWidth="54.0" text="EUR" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <ImageView fx:id="addBalanceButton1" fitHeight="30.0" fitWidth="30.0" layoutX="406.0" layoutY="11.0" onMouseClicked="#promptAddBalance1" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/plus.png" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <Label fx:id="deleteButton1" alignment="CENTER" layoutX="450.0" layoutY="10.0" onMouseClicked="#deleteAccount1" prefHeight="32.0" prefWidth="86.0" styleClass="cancelButton" stylesheets="@../CSS/buttons.css" text="DELETE" textFill="#b81212">
+                            <font>
+                                <Font name="Impact" size="20.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Label>
+                    </children>
+                </Pane>
+                <Pane fx:id="accountPane2" layoutX="225.0" layoutY="170.0" prefHeight="50.0" prefWidth="550.0" styleClass="transactionPanel" stylesheets="@../CSS/backgrounds.css" visible="false">
+                    <children>
+                        <Label fx:id="accountBalance2" alignment="CENTER_RIGHT" layoutX="196.0" layoutY="13.0" prefHeight="25.0" prefWidth="135.0" text="1250.55" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="accountName2" layoutX="21.0" layoutY="13.0" prefHeight="25.0" prefWidth="166.0" text="BAT201801120212" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="accountCurrency2" layoutX="341.0" layoutY="13.0" prefHeight="25.0" prefWidth="54.0" text="RON" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <ImageView fx:id="addBalanceButton2" fitHeight="30.0" fitWidth="30.0" layoutX="406.0" layoutY="11.0" onMouseClicked="#promptAddBalance2" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/plus.png" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <Label fx:id="deleteButton2" alignment="CENTER" layoutX="450.0" layoutY="10.0" onMouseClicked="#deleteAccount2" prefHeight="32.0" prefWidth="86.0" styleClass="cancelButton" stylesheets="@../CSS/buttons.css" text="DELETE" textFill="#b81212">
+                            <font>
+                                <Font name="Impact" size="20.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Label>
+                    </children>
+                </Pane>
+                <Pane fx:id="accountPane3" layoutX="225.0" layoutY="230.0" prefHeight="50.0" prefWidth="550.0" styleClass="transactionPanel" stylesheets="@../CSS/backgrounds.css" visible="false">
+                    <children>
+                        <Label fx:id="accountBalance3" alignment="CENTER_RIGHT" layoutX="196.0" layoutY="13.0" prefHeight="25.0" prefWidth="135.0" text="148.76" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="accountName3" layoutX="21.0" layoutY="13.0" prefHeight="25.0" prefWidth="166.0" text="BAT201711224211" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="accountCurrency3" layoutX="341.0" layoutY="13.0" prefHeight="25.0" prefWidth="54.0" text="USD" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <ImageView fx:id="addBalanceButton3" fitHeight="30.0" fitWidth="30.0" layoutX="406.0" layoutY="11.0" onMouseClicked="#promptAddBalance3" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/plus.png" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <Label fx:id="deleteButton3" alignment="CENTER" layoutX="450.0" layoutY="10.0" onMouseClicked="#deleteAccount3" prefHeight="32.0" prefWidth="86.0" styleClass="cancelButton" stylesheets="@../CSS/buttons.css" text="DELETE" textFill="#b81212">
+                            <font>
+                                <Font name="Impact" size="20.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Label>
+                    </children>
+                </Pane>
+                <Pane fx:id="accountPane4" layoutX="225.0" layoutY="290.0" prefHeight="50.0" prefWidth="550.0" styleClass="transactionPanel" stylesheets="@../CSS/backgrounds.css" visible="false">
+                    <children>
+                        <Label fx:id="accountBalance4" alignment="CENTER_RIGHT" layoutX="196.0" layoutY="13.0" prefHeight="25.0" prefWidth="135.0" text="97.34" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="accountName4" layoutX="21.0" layoutY="13.0" prefHeight="25.0" prefWidth="166.0" text="BAT201609021126" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="accountCurrency4" layoutX="341.0" layoutY="13.0" prefHeight="25.0" prefWidth="54.0" text="USD" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <ImageView fx:id="addBalanceButton4" fitHeight="30.0" fitWidth="30.0" layoutX="406.0" layoutY="11.0" onMouseClicked="#promptAddBalance4" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/plus.png" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <Label fx:id="deleteButton4" alignment="CENTER" layoutX="450.0" layoutY="10.0" onMouseClicked="#deleteAccount4" prefHeight="32.0" prefWidth="86.0" styleClass="cancelButton" stylesheets="@../CSS/buttons.css" text="DELETE" textFill="#b81212">
+                            <font>
+                                <Font name="Impact" size="20.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Label>
+                    </children>
+                </Pane>
+                <Pane fx:id="accountPane5" layoutX="225.0" layoutY="350.0" prefHeight="50.0" prefWidth="550.0" styleClass="transactionPanel" stylesheets="@../CSS/backgrounds.css" visible="false">
+                    <children>
+                        <Label fx:id="accountBalance5" alignment="CENTER_RIGHT" layoutX="196.0" layoutY="13.0" prefHeight="25.0" prefWidth="135.0" text="0.00" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="accountName5" layoutX="21.0" layoutY="13.0" prefHeight="25.0" prefWidth="166.0" text="BAT201501050405" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="accountCurrency5" layoutX="341.0" layoutY="13.0" prefHeight="25.0" prefWidth="54.0" text="EUR" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <ImageView fx:id="addBalanceButton5" fitHeight="30.0" fitWidth="30.0" layoutX="406.0" layoutY="11.0" onMouseClicked="#promptAddBalance5" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/plus.png" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <Label fx:id="deleteButton5" alignment="CENTER" layoutX="450.0" layoutY="9.0" onMouseClicked="#deleteAccount5" prefHeight="32.0" prefWidth="86.0" styleClass="cancelButton" stylesheets="@../CSS/buttons.css" text="DELETE" textFill="#b81212">
+                            <font>
+                                <Font name="Impact" size="20.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Label>
+                    </children>
+                </Pane>
+                <Pane fx:id="createAccountPopUp" layoutX="250.0" layoutY="105.0" prefHeight="250.0" prefWidth="500.0" styleClass="popUpPane" stylesheets="@../CSS/backgrounds.css" visible="false">
+                    <children>
+                        <Label fx:id="confirmCreateAccountButton" alignment="CENTER" layoutX="365.0" layoutY="181.0" onMouseClicked="#confirmCreateAccount" prefHeight="55.0" prefWidth="121.0" styleClass="saveButton" stylesheets="@../CSS/buttons.css" text="CONFIRM" textFill="#17c216">
+                            <font>
+                                <Font name="Impact" size="25.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Label>
+                        <Label fx:id="cancelCreateAccountButton" alignment="CENTER" layoutX="227.0" layoutY="181.0" onMouseClicked="#cancelCreateAccount" prefHeight="55.0" prefWidth="121.0" styleClass="cancelButton" stylesheets="@../CSS/buttons.css" text="CANCEL" textFill="#b81212">
+                            <font>
+                                <Font name="Impact" size="25.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Label>
+                        <TextField fx:id="accountBalanceAdd" layoutX="31.0" layoutY="93.0" prefHeight="30.0" promptText="Account balance">
+                            <font>
+                                <Font name="Arial" size="16.0" />
+                            </font>
+                        </TextField>
+                        <ComboBox fx:id="accountCurrencyAdd" layoutX="248.0" layoutY="94.0" prefHeight="30.0" prefWidth="100.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ComboBox>
+                    </children>
+                </Pane>
+                <Label fx:id="lblMaxAccountsReached" layoutX="478.0" layoutY="22.0" prefHeight="25.0" prefWidth="258.0" text="Can't create any more accounts!" textFill="#b81212" visible="false">
+                    <font>
+                        <Font name="Arial Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Pane fx:id="addBalancePane" layoutX="215.0" layoutY="100.0" prefHeight="319.0" prefWidth="574.0" styleClass="popUpPane" stylesheets="@../CSS/backgrounds.css" visible="false">
+                    <children>
+                        <Label layoutX="28.0" layoutY="40.0" prefHeight="32.0" prefWidth="166.0" text="Account name:" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="17.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="28.0" layoutY="72.0" prefHeight="32.0" prefWidth="166.0" text="Account currency:" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="17.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="addBalanceAccountName" layoutX="194.0" layoutY="40.0" prefHeight="32.0" prefWidth="258.0" text="Account name" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="17.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="addBalanceAccountCurrency" layoutX="194.0" layoutY="72.0" prefHeight="32.0" prefWidth="258.0" text="Account name" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="17.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="addBalanceConfirmButton" alignment="CENTER" layoutX="439.0" layoutY="250.0" onMouseClicked="#addBalanceToAccount" prefHeight="55.0" prefWidth="121.0" styleClass="saveButton" stylesheets="@../CSS/buttons.css" text="CONFIRM" textFill="#17c216">
+                            <font>
+                                <Font name="Impact" size="25.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Label>
+                        <Label fx:id="addBalanceCancelButton" alignment="CENTER" layoutX="308.0" layoutY="250.0" onMouseClicked="#cancelAddBalance" prefHeight="55.0" prefWidth="121.0" styleClass="cancelButton" stylesheets="@../CSS/buttons.css" text="CANCEL" textFill="#b81212">
+                            <font>
+                                <Font name="Impact" size="25.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Label>
+                        <TextField fx:id="addBalanceAmount" layoutX="28.0" layoutY="160.0" prefHeight="32.0" prefWidth="212.0" promptText="Amount">
+                            <font>
+                                <Font name="Arial" size="17.0" />
+                            </font>
+                        </TextField>
+                    </children>
+                </Pane>
+            </children>
+        </AnchorPane>
+    </children>
+</GridPane>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manager.controller.ProfileController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="800.0" styleClass="mainBackground" stylesheets="@../CSS/backgrounds.css">
+         <children>
+            <Pane prefHeight="500.0" prefWidth="200.0" styleClass="sidePanel" stylesheets="@../CSS/backgrounds.css">
+               <children>
+                  <Label fx:id="homeButton" alignment="CENTER" layoutY="125.0" onMouseClicked="#gotoHomeScreen" prefHeight="50.0" prefWidth="200.0" styleClass="buttonLabel" stylesheets="@../CSS/main.css" text="HOME" textFill="WHITE">
+                     <font>
+                        <Font name="Impact" size="28.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label fx:id="accountsButton" alignment="CENTER" layoutY="225.0" onMouseClicked="#gotoAccountsScreen" prefHeight="50.0" prefWidth="200.0" styleClass="buttonLabel" stylesheets="@../CSS/main.css" text="ACCOUNTS" textFill="WHITE">
+                     <font>
+                        <Font name="Impact" size="28.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label fx:id="transferButton" alignment="CENTER" layoutY="275.0" onMouseClicked="#gotoTransferScreen" prefHeight="50.0" prefWidth="200.0" styleClass="buttonLabel" stylesheets="@../CSS/main.css" text="TRANSFER" textFill="WHITE">
+                     <font>
+                        <Font name="Impact" size="28.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label fx:id="payButton" alignment="CENTER" layoutY="325.0" onMouseClicked="#gotoPayScreen" prefHeight="50.0" prefWidth="200.0" styleClass="buttonLabel" stylesheets="@../CSS/main.css" text="PAY" textFill="WHITE">
+                     <font>
+                        <Font name="Impact" size="28.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label alignment="CENTER" layoutY="175.0" prefHeight="50.0" prefWidth="200.0" style="-fx-border-color: white;" styleClass="buttonLabel" stylesheets="@../CSS/main.css" text="PROFILE" textFill="WHITE">
+                     <font>
+                        <Font name="Impact" size="28.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label fx:id="logoutButton" alignment="CENTER" layoutX="14.0" layoutY="14.0" onMouseClicked="#logoutUser" prefHeight="32.0" prefWidth="99.0" styleClass="cancelButton" stylesheets="@../CSS/buttons.css" text="LOGOUT" textFill="#b81212">
+                     <font>
+                        <Font name="Impact" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </Pane>
+            <Label fx:id="editProfileButton" alignment="CENTER" layoutX="531.0" layoutY="334.0" onMouseClicked="#promptEditProfile" prefHeight="40.0" prefWidth="239.0" styleClass="regularButton" stylesheets="@../CSS/buttons.css" text="EDIT PROFILE" textFill="WHITE">
+               <font>
+                  <Font name="Impact" size="22.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="transactionHistoryButton" alignment="CENTER" layoutX="531.0" layoutY="384.0" onMouseClicked="#gotoTransactionHistoryScreen" prefHeight="40.0" prefWidth="239.0" styleClass="regularButton" stylesheets="@../CSS/buttons.css" text="TRANSACTION HISTORY" textFill="WHITE">
+               <font>
+                  <Font name="Impact" size="22.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="changePasswordButton" alignment="CENTER" layoutX="531.0" layoutY="434.0" onMouseClicked="#promptChangePassword" prefHeight="40.0" prefWidth="239.0" styleClass="regularButton" stylesheets="@../CSS/buttons.css" text="CHANGE PASSWORD" textFill="WHITE">
+               <font>
+                  <Font name="Impact" size="22.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="213.0" layoutY="105.0" prefHeight="29.0" prefWidth="150.0" text="Username:" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="213.0" layoutY="144.0" prefHeight="29.0" prefWidth="150.0" text="First name:" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="213.0" layoutY="183.0" prefHeight="29.0" prefWidth="150.0" text="Last name:" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="213.0" layoutY="222.0" prefHeight="29.0" prefWidth="150.0" text="Address:" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="213.0" layoutY="261.0" prefHeight="29.0" prefWidth="150.0" text="Email:" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="profileUsername" layoutX="367.0" layoutY="105.0" prefHeight="29.0" prefWidth="380.0" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="profileFirstName" layoutX="368.0" layoutY="144.0" prefHeight="29.0" prefWidth="380.0" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="profileLastName" layoutX="368.0" layoutY="183.0" prefHeight="29.0" prefWidth="380.0" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="profileAddress" layoutX="368.0" layoutY="222.0" prefHeight="29.0" prefWidth="380.0" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="profileEmail" layoutX="368.0" layoutY="261.0" prefHeight="29.0" prefWidth="380.0" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="profileLastNameEdit" layoutX="368.0" layoutY="185.0" prefWidth="380.0" visible="false" />
+            <TextField fx:id="profileFirstNameEdit" layoutX="368.0" layoutY="146.0" prefWidth="380.0" visible="false" />
+            <TextField fx:id="profileAddressEdit" layoutX="368.0" layoutY="224.0" prefWidth="380.0" visible="false" />
+            <Label fx:id="saveEditProfileButton" alignment="CENTER" layoutX="638.0" layoutY="434.0" onMouseClicked="#saveEditProfile" prefHeight="40.0" prefWidth="132.0" styleClass="saveButton" stylesheets="@../CSS/buttons.css" text="SAVE" textFill="#17c216" visible="false">
+               <font>
+                  <Font name="Impact" size="22.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="cancelEditProfileButton" alignment="CENTER" layoutX="496.0" layoutY="434.0" onMouseClicked="#cancelEditProfile" prefHeight="40.0" prefWidth="132.0" styleClass="cancelButton" stylesheets="@../CSS/buttons.css" text="CANCEL" textFill="#cd1010" visible="false">
+               <font>
+                  <Font name="Impact" size="22.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Pane fx:id="popUpPane" layoutX="252.0" layoutY="100.0" prefHeight="300.0" prefWidth="500.0" styleClass="popUpPane" stylesheets="@../CSS/backgrounds.css" visible="false">
+               <children>
+                  <PasswordField fx:id="txtOldPassword" layoutX="42.0" layoutY="54.0" prefHeight="40.0" prefWidth="332.0" promptText="Old password">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </PasswordField>
+                  <PasswordField fx:id="txtNewPassword" layoutX="42.0" layoutY="104.0" prefHeight="40.0" prefWidth="332.0" promptText="New password">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </PasswordField>
+                  <PasswordField fx:id="txtConfirmPassword" layoutX="42.0" layoutY="154.0" prefHeight="40.0" prefWidth="332.0" promptText="Confirm new password">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </PasswordField>
+                  <Label fx:id="passwordChangeSave" alignment="CENTER" layoutX="359.0" layoutY="222.0" onMouseClicked="#savePasswordChange" prefHeight="55.0" prefWidth="121.0" styleClass="saveButton" stylesheets="@../CSS/buttons.css" text="SAVE" textFill="#17c216">
+                     <font>
+                        <Font name="Impact" size="25.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label fx:id="passwordChangeCancel" alignment="CENTER" layoutX="221.0" layoutY="222.0" onMouseClicked="#cancelPasswordChange" prefHeight="55.0" prefWidth="121.0" styleClass="cancelButton" stylesheets="@../CSS/buttons.css" text="CANCEL" textFill="#b81212">
+                     <font>
+                        <Font name="Impact" size="25.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

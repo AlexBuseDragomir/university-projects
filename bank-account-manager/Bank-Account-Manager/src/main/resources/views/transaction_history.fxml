@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manager.controller.TransactionHistoryController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="800.0" styleClass="mainBackground" stylesheets="@../CSS/backgrounds.css">
+         <children>
+            <Pane prefHeight="500.0" prefWidth="200.0" styleClass="sidePanel" stylesheets="@../CSS/backgrounds.css">
+               <children>
+                  <Label fx:id="homeButton" alignment="CENTER" layoutY="125.0" onMouseClicked="#gotoHomeScreen" prefHeight="50.0" prefWidth="200.0" styleClass="buttonLabel" stylesheets="@../CSS/main.css" text="HOME" textFill="WHITE">
+                     <font>
+                        <Font name="Impact" size="28.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label fx:id="accountsButton" alignment="CENTER" layoutY="225.0" onMouseClicked="#gotoAccountsScreen" prefHeight="50.0" prefWidth="200.0" styleClass="buttonLabel" stylesheets="@../CSS/main.css" text="ACCOUNTS" textFill="WHITE">
+                     <font>
+                        <Font name="Impact" size="28.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label fx:id="transferButton" alignment="CENTER" layoutY="275.0" onMouseClicked="#gotoTransferScreen" prefHeight="50.0" prefWidth="200.0" styleClass="buttonLabel" stylesheets="@../CSS/main.css" text="TRANSFER" textFill="WHITE">
+                     <font>
+                        <Font name="Impact" size="28.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label fx:id="payButton" alignment="CENTER" layoutY="325.0" onMouseClicked="#gotoPayScreen" prefHeight="50.0" prefWidth="200.0" styleClass="buttonLabel" stylesheets="@../CSS/main.css" text="PAY" textFill="WHITE">
+                     <font>
+                        <Font name="Impact" size="28.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label fx:id="profileButton" alignment="CENTER" layoutY="175.0" onMouseClicked="#gotoProfileScreen" prefHeight="50.0" prefWidth="200.0" style="-fx-border-color: white;" styleClass="buttonLabel" stylesheets="@../CSS/main.css" text="PROFILE" textFill="WHITE">
+                     <font>
+                        <Font name="Impact" size="28.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </Pane>
+            <ScrollPane hbarPolicy="NEVER" layoutX="200.0" layoutY="53.0" prefHeight="447.0" prefWidth="598.0" vbarPolicy="NEVER">
+               <content>
+                  <AnchorPane prefHeight="800.0" prefWidth="598.0" styleClass="mainBackground" stylesheets="@../CSS/backgrounds.css">
+                     <children>
+                        <Pane fx:id="transactionPane1" layoutX="24.0" layoutY="21.0" prefHeight="140.0" prefWidth="550.0" styleClass="transactionPanel" stylesheets="@../CSS/backgrounds.css" visible="false">
+                           <children>
+                              <Label layoutX="61.0" layoutY="20.0" prefHeight="25.0" prefWidth="166.0" text="Source account" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="sourceAccount1" layoutX="270.0" layoutY="20.0" prefHeight="25.0" prefWidth="219.0" text="BAT201903040100" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="61.0" layoutY="45.0" prefHeight="25.0" prefWidth="166.0" text="Destination account" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="destinationAccount1" layoutX="270.0" layoutY="45.0" prefHeight="25.0" prefWidth="219.0" text="BAT201903040305" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="61.0" layoutY="70.0" prefHeight="25.0" prefWidth="166.0" text="Date of transaction" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="transactionDate1" layoutX="270.0" layoutY="70.0" prefHeight="25.0" prefWidth="219.0" text="2019/01/14" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="transactionType1" layoutX="61.0" layoutY="95.0" prefHeight="25.0" prefWidth="166.0" text="Amount transfered" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="amount1" layoutX="270.0" layoutY="95.0" prefHeight="25.0" prefWidth="219.0" text="122.00 EUR" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="transactionPane2" layoutX="24.0" layoutY="171.0" prefHeight="140.0" prefWidth="550.0" styleClass="transactionPanel" stylesheets="@../CSS/backgrounds.css" visible="false">
+                           <children>
+                              <Label layoutX="61.0" layoutY="20.0" prefHeight="25.0" prefWidth="166.0" text="Source account" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="sourceAccount2" layoutX="270.0" layoutY="20.0" prefHeight="25.0" prefWidth="219.0" text="BAT201903040200" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="61.0" layoutY="45.0" prefHeight="25.0" prefWidth="166.0" text="Destination account" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="destinationAccount2" layoutX="270.0" layoutY="45.0" prefHeight="25.0" prefWidth="219.0" text="BAT201903040506" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="61.0" layoutY="70.0" prefHeight="25.0" prefWidth="166.0" text="Date of transaction" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="transactionDate2" layoutX="270.0" layoutY="70.0" prefHeight="25.0" prefWidth="219.0" text="2018/06/03" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="transactionType2" layoutX="61.0" layoutY="95.0" prefHeight="25.0" prefWidth="166.0" text="Amount transfered" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="amount2" layoutX="270.0" layoutY="95.0" prefHeight="25.0" prefWidth="219.0" text="400.00 USD" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="transactionPane3" layoutX="24.0" layoutY="321.0" prefHeight="140.0" prefWidth="550.0" styleClass="transactionPanel" stylesheets="@../CSS/backgrounds.css" visible="false">
+                           <children>
+                              <Label layoutX="61.0" layoutY="20.0" prefHeight="25.0" prefWidth="166.0" text="Source account" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="sourceAccount3" layoutX="270.0" layoutY="20.0" prefHeight="25.0" prefWidth="219.0" text="BAT201812040235" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="61.0" layoutY="45.0" prefHeight="25.0" prefWidth="166.0" text="Destination account" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="destinationAccount3" layoutX="270.0" layoutY="45.0" prefHeight="25.0" prefWidth="219.0" text="BAT201903040506" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="61.0" layoutY="70.0" prefHeight="25.0" prefWidth="166.0" text="Date of transaction" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="transactionDate3" layoutX="270.0" layoutY="70.0" prefHeight="25.0" prefWidth="219.0" text="2018/05/11" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="transactionType3" layoutX="61.0" layoutY="95.0" prefHeight="25.0" prefWidth="166.0" text="Amount transfered" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="amount3" layoutX="270.0" layoutY="95.0" prefHeight="25.0" prefWidth="219.0" text="1020.00 RON" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="transactionPane4" layoutX="24.0" layoutY="471.0" prefHeight="140.0" prefWidth="550.0" styleClass="transactionPanel" stylesheets="@../CSS/backgrounds.css" visible="false">
+                           <children>
+                              <Label layoutX="61.0" layoutY="20.0" prefHeight="25.0" prefWidth="166.0" text="Source account" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="sourceAccount4" layoutX="270.0" layoutY="20.0" prefHeight="25.0" prefWidth="219.0" text="BAT201814120588" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="61.0" layoutY="45.0" prefHeight="25.0" prefWidth="166.0" text="Destination account" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="destinationAccount4" layoutX="270.0" layoutY="45.0" prefHeight="25.0" prefWidth="219.0" text="BAT201609121223" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="61.0" layoutY="70.0" prefHeight="25.0" prefWidth="166.0" text="Date of transaction" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="transactionDate4" layoutX="270.0" layoutY="70.0" prefHeight="25.0" prefWidth="219.0" text="2016/10/12" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="transactionType4" layoutX="61.0" layoutY="95.0" prefHeight="25.0" prefWidth="166.0" text="Amount transfered" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="amount4" layoutX="270.0" layoutY="95.0" prefHeight="25.0" prefWidth="219.0" text="2500.00 EUR" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="transactionPane5" layoutX="24.0" layoutY="621.0" prefHeight="140.0" prefWidth="550.0" styleClass="transactionPanel" stylesheets="@../CSS/backgrounds.css" visible="false">
+                           <children>
+                              <Label layoutX="61.0" layoutY="20.0" prefHeight="25.0" prefWidth="166.0" text="Source account" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="sourceAccount5" layoutX="270.0" layoutY="20.0" prefHeight="25.0" prefWidth="219.0" text="BAT201814120588" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="61.0" layoutY="45.0" prefHeight="25.0" prefWidth="166.0" text="Destination account" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="destinationAccount5" layoutX="270.0" layoutY="45.0" prefHeight="25.0" prefWidth="219.0" text="BAT201609121223" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="61.0" layoutY="70.0" prefHeight="25.0" prefWidth="166.0" text="Date of transaction" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="transactionDate5" layoutX="270.0" layoutY="70.0" prefHeight="25.0" prefWidth="219.0" text="2016/10/12" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="transactionType5" layoutX="61.0" layoutY="95.0" prefHeight="25.0" prefWidth="166.0" text="Amount transfered" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="amount5" layoutX="270.0" layoutY="95.0" prefHeight="25.0" prefWidth="219.0" text="2500.00 EUR" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <Pane layoutX="200.0" layoutY="3.0" prefHeight="50.0" prefWidth="598.0">
+               <children>
+                  <Label fx:id="backButton" alignment="CENTER" layoutX="7.0" layoutY="5.0" onMouseClicked="#gotoProfileScreen" prefHeight="40.0" prefWidth="112.0" styleClass="backButton" stylesheets="@../CSS/buttons.css" text="BACK" textFill="WHITE">
+                     <font>
+                        <Font name="Impact" size="22.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
