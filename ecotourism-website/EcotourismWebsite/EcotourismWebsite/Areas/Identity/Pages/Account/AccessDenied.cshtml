@@ -1,0 +1,24 @@
+﻿@page
+@model AccessDeniedModel
+@{
+    ViewData["Title"] = "Access has been restricted";
+}
+
+<header>
+    <h1 class="text-danger">@ViewData["Title"]</h1>
+    
+    <p class="text-danger"><h1>
+        It seems that you are trying to access a resource that
+        <br />
+        is not available for the current role
+</h1></p>
+
+    <p class="text-info"><h1>Try to login on an account that has more privileges</h1></p>
+   
+</header>
+
+<body style="background-image: url('/images/denied.jpg');">
+    <br /><br /><br /><br /> <br /><br /><br /><br />
+    <br /><br /><br /><br /> <br /><br /><br /><br />
+    <br /><br /><br /><br /> <br /><br /><br /><br />
+</body>

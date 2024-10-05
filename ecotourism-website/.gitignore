@@ -1,0 +1,68 @@
+# Build Folders
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# Rider & Visual Studio Code
+.idea/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio
+.vscode/
+*.csproj.user
+*.csproj.vspscc
+*.sln.docstates
+.vs/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# Debug and Release folders
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa]rm/
+[Aa]rm64/
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Publish directory
+publish/
+
+# Entity Framework
+.migrations/
+
+# Windows image file caches
+*.png.cache
+*.ico.cache
+
+# IIS
+*.vspscc
+*.suo
+*.config
+*.pubxml
+*.publishproj
+
+# JetBrains Rider
+.idea/
+
+# Log files
+*.log
