@@ -35,8 +35,8 @@ namespace EcotourismWebsite
             })
             .AddFacebook(facebookOptions =>
             {
-                facebookOptions.AppId = "428919564614985";
-                facebookOptions.AppSecret = "739f6b247d421d3e144df6fd790ea545";
+                facebookOptions.AppId = "insert-app-id-here";
+                facebookOptions.AppSecret = "insert-app-secret-here";
             })
             .AddCookie();
 
