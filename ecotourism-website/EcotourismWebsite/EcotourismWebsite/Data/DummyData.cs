@@ -22,7 +22,7 @@ namespace EcotourismWebsite.Data
             string role3 = "TripGuide";
             string description3 = "This is the moderator role";
 
-            string password = "P@$$w0rd";
+            string password = "MockPassword123";
 
             if (await roleManager.FindByNameAsync(role1) == null)
             {
@@ -39,20 +39,20 @@ namespace EcotourismWebsite.Data
                 await roleManager.CreateAsync(new ApplicationRole(role3, description3, DateTime.Now));
             }
 
-            if (await userManager.FindByNameAsync("alex@yahoo.com") == null)
+            if (await userManager.FindByNameAsync("user1@example.com") == null)
             {
                 var user = new ApplicationUser
                 {
-                    UserName = "alex@yahoo.com",
-                    Email = "alex@yahoo.com",
-                    FirstName = "Alexandru",
-                    LastName = "Dragomir",
-                    Street = "Aleea Teilor",
-                    City = "Craiova",
-                    Province = "DJ",
-                    PostalCode = "200291",
-                    Country = "Romania",
-                    PhoneNumber = "0772243021"
+                    UserName = "user1@example.com",
+                    Email = "user1@example.com",
+                    FirstName = "John",
+                    LastName = "Doe",
+                    Street = "Mock Street 1",
+                    City = "Mock City",
+                    Province = "XY",
+                    PostalCode = "12345",
+                    Country = "Mockland",
+                    PhoneNumber = "0001112223"
                 };
 
                 var result = await userManager.CreateAsync(user);
@@ -62,24 +62,22 @@ namespace EcotourismWebsite.Data
                     await userManager.AddPasswordAsync(user, password);
                     await userManager.AddToRoleAsync(user, role1);
                 }
-
-                //adminId1 = user.Id;
             }
 
-            if (await userManager.FindByNameAsync("andrei@gmail.com") == null)
+            if (await userManager.FindByNameAsync("user2@example.com") == null)
             {
                 var user = new ApplicationUser
                 {
-                    UserName = "andrei@gmail.com",
-                    Email = "andrei@gmail.com",
-                    FirstName = "Andrei",
-                    LastName = "Ciurez",
-                    Street = "Bulevardul Dacia",
-                    City = "Craiova",
-                    Province = "DJ",
-                    PostalCode = "210299",
-                    Country = "Romania",
-                    PhoneNumber = "0748240355"
+                    UserName = "user2@example.com",
+                    Email = "user2@example.com",
+                    FirstName = "Jane",
+                    LastName = "Smith",
+                    Street = "Mock Boulevard",
+                    City = "Mock City",
+                    Province = "XY",
+                    PostalCode = "67890",
+                    Country = "Mockland",
+                    PhoneNumber = "0001112224"
                 };
 
                 var result = await userManager.CreateAsync(user);
@@ -91,20 +89,20 @@ namespace EcotourismWebsite.Data
                 }
             }
 
-            if (await userManager.FindByNameAsync("maria@gmail.com") == null)
+            if (await userManager.FindByNameAsync("user3@example.com") == null)
             {
                 var user = new ApplicationUser
                 {
-                    UserName = "maria@gmail.com",
-                    Email = "maria@gmail.com",
-                    FirstName = "Maria",
-                    LastName = "Stan",
-                    Street = "Strada Carol I",
-                    City = "Craiova",
-                    Province = "DJ",
-                    PostalCode = "277101",
-                    Country = "Romania",
-                    PhoneNumber = "0751265784"
+                    UserName = "user3@example.com",
+                    Email = "user3@example.com",
+                    FirstName = "Alice",
+                    LastName = "Johnson",
+                    Street = "Mock Avenue",
+                    City = "Mock City",
+                    Province = "XY",
+                    PostalCode = "54321",
+                    Country = "Mockland",
+                    PhoneNumber = "0001112225"
                 };
 
                 var result = await userManager.CreateAsync(user);
