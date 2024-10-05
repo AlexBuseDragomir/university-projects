@@ -8,7 +8,8 @@ target/
 *.ipr
 *.iws
 out/
-# Project files
+
+# Compiled files
 *.class
 *.jar
 *.war
@@ -16,7 +17,6 @@ out/
 
 # User-specific files
 *.DS_Store
-*.class
 *.log
 *.hprof
 
@@ -25,7 +25,10 @@ out/
 !**/mvnw
 !**/mvnw.cmd
 
-# Other files
+# Include the bin directory
+!bin/
+
+# Other temporary files
 *.swp
 *.swo
 *~
