@@ -41,13 +41,6 @@ INSERT INTO `users` (`userid`, `firstName`, `lastName`, `userName`, `password`, 
 INSERT INTO `users` (`userid`, `firstName`, `lastName`, `userName`, `password`, `email`, `address`)
        VALUES (3, "Michael", "Johnson", "michaeljohnson", "password789", "michaeljohnson@example.com", "789 Pine St, Villagetown");
 
-INSERT INTO `users` (`userid`, `firstName`, `lastName`, `userName`, `password`, `email`, `address`)
-       VALUES (1, "Alexandru", "Dragomir", "alexandru", "alexandru1@", "alexandru.dragomir15@yahoo.com", "Strada Mihai Eminescu, nr 16");
-INSERT INTO `users` (`userid`, `firstName`, `lastName`, `userName`, `password`, `email`, `address`)
-       VALUES (2, "Andrei", "Dana", "andrei", "andreidana1!", "dana.andrei@yahoo.com", "Str. Viorelelor, nr. 4");
-INSERT INTO `users` (`userid`, `firstName`, `lastName`, `userName`, `password`, `email`, `address`)
-       VALUES (3, "Florin", "Nica", "florin", "florinnica1!", "nica.florin@yahoo.com", "Str. Plopilor, Craiova, Dolj");
-
 -- Insert dummy data for `accounts`
 INSERT INTO `accounts` (`accountid`, `accountName`, `accountBalance`, `accountCurrency`, `accountUserid`)
        VALUES (1, "ACC123456789", 3173.58, "RON", "1");
