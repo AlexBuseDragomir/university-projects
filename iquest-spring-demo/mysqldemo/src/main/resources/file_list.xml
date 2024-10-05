@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<simpleUserList>
+    <userList id="1">
+        <name>Andrei</name>
+        <salary>500</salary>
+    </userList>
+    <userList id="2">
+        <name>Marius</name>
+        <salary>600</salary>
+    </userList>
+    <userList id="3">
+        <name>Ana</name>
+        <salary>900</salary>
+    </userList>
+    <userList id="5">
+        <name>George</name>
+        <salary>750</salary>
+    </userList>
+    <userList id="7">
+        <name>Marcel</name>
+        <salary>850</salary>
+    </userList>
+</simpleUserList>
