@@ -1,12 +1,39 @@
-This application will be created under the form of a website for a company which deals with ecotourism.
-First of all, ecotourism is a form of tourism involving visiting fragile, pristine, and relatively undisturbed natural areas, intended as a low-impact and often small scale alternative to standard commercial mass tourism. 
-Ecotourism typically involves travel to destinations where flora, fauna, and cultural heritage are the primary attractions. Ecotourism is intended to offer tourists an insight into the impact of human beings on the environment and to foster a greater appreciation of our natural habitats.
-Trough the website, a user will be able to create an account and, trough this, make reservations for exotic trips troughout Central and South America (in general Brazil, Bolivia, Costa Rica, Venezuela).
-The trips are managed by special users under the form of the trip guides who are in charge with planning the whole trip, preparing the itinerary (places to visit, hotels, hours, attractions, the cost, the date etc) in advance and posting it on the website under the form of an announcement. 
-Each announcement will contain pictures, a map with the routes and many more informations regarding all other aspects that can be of interest for the visitors.
-The trip guides are users, but they will have special right. A casul user cannot become a guide. These people are employees of the travel company that have experience in these situations. They can be contacted on the website by the users in case they want more informations and can respond to questions by commenting on their managed trips pages. Usually, there will be more than one trip guide during a tour.
-After returning from the travel, users can leave feedback under the form of a comment and can share their impression with other people who have visited that area. 
+# Ecotourism Website Project
 
-DISCLAIMER: I do NOT own the photos used in this project!    
-				They have been used only in an educational purpose.       
-				This website represents a semester project.      
+This project is a website designed for a company specializing in ecotourism.
+
+## What is Ecotourism?
+Ecotourism is a form of sustainable tourism focused on visiting fragile, pristine, and undisturbed natural areas. It aims to minimize environmental impact and serves as a low-impact, small-scale alternative to mass tourism. 
+
+The focus is on destinations where local flora, fauna, and cultural heritage are the primary attractions. Ecotourism offers visitors insight into human impact on the environment, fostering greater appreciation of natural habitats.
+
+## Features
+
+### User Accounts & Reservations
+Users can create accounts and book trips to exotic destinations across Central and South America, including:
+- Brazil
+- Bolivia
+- Costa Rica
+- Venezuela
+
+### Trip Guides
+Trips are managed by professional guides employed by the company. These guides:
+- Plan itineraries in advance (places to visit, accommodations, attractions, costs, dates, etc.)
+- Post trip details on the website as announcements, complete with maps, photos, and other relevant information
+- Respond to user inquiries and questions through comments on their trip pages
+
+Each trip typically has multiple guides to ensure a comprehensive and well-organized experience.
+
+### Announcements & Trip Details
+Each trip announcement will include:
+- Pictures
+- A detailed map with routes
+- Important information on destinations, activities, and logistics
+
+### Feedback & Reviews
+After completing a trip, users can leave feedback and share their experiences through comments, helping others gain insights into the tours and destinations.
+
+## Disclaimer
+**Disclaimer:**
+- I do *not* own any of the photos used in this project. They are included for educational purposes only.
+- This website is part of a semester project.
