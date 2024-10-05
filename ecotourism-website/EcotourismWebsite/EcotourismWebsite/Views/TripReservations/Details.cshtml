@@ -1,0 +1,42 @@
+﻿@model EcotourismWebsite.Models.TripReservation
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TripReservation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ReservationDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ReservationDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TripDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TripDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Trip)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Trip.TripId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.TripReservationId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
