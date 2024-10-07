@@ -1,7 +1,8 @@
 # Ecotourism Website Project
 
 This project is a website designed for a company specializing in ecotourism.  
-**NOTE:** The project is still in draft format, with only the basic structure changes implemented.
+
+**Note:** The project is still in draft format, with only the basic structure changes implemented.
 
 ## What is Ecotourism?
 Ecotourism is a form of sustainable tourism focused on visiting fragile, pristine, and undisturbed natural areas. It aims to minimize environmental impact and serves as a low-impact, small-scale alternative to mass tourism. 
