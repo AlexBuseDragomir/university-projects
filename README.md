@@ -16,6 +16,7 @@ They do not adhere to commercial security standards, as that is not their primar
 2. **[Ecotourism Website](https://github.com/AlexBuseDragomir/university-projects/blob/3c55d39003ac97e27c742abb477c1fa68d339b0e/ecotourism-website/README.md)**
    - A website for an ecotourism company, focusing on sustainable tourism.
    - Features include user accounts, trip reservations, trip guides, announcements, trip details, and feedback.
+   - The project is still in draft format, with only the basic structure changes implemented.
 
 3. **[Graph Drawing Application](https://github.com/AlexBuseDragomir/university-projects/blob/3c55d39003ac97e27c742abb477c1fa68d339b0e/graph-drawing-application/README.md)**
    - A JavaFX application for drawing graphs.
