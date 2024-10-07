@@ -1,6 +1,6 @@
 # Ecotourism Website Project
 
-This project is a website designed for a company specializing in ecotourism.
+This project is a website designed for a company specializing in ecotourism.  
 **NOTE:** The project is still in draft format, with only the basic structure changes implemented.
 
 ## What is Ecotourism?
