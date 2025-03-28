@@ -1,5 +1,8 @@
 # Santa Claus Workshop Project
 
+**NOTE:** This was never fully implemented, still a work in progress. 
+It contains the main code infrastructure, but it is not properly syncronized.
+
 ## I. Introduction & Problem Statement
 
 Christmas is just around the corner! Santa Klaus and his staff (**Elves** and **Reindeers**) are preparing for another wonderful Christmas that brings joy and gifts to all children around the world.
