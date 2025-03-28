@@ -30,26 +30,22 @@ They do not adhere to commercial security standards, as that is not their primar
    - An application using Java, JavaFX, and Maven.
    - Provides an interface for checking if a text matches a given regex.
 
-6. **[PIC24 Microcontroller VHDL](https://github.com/AlexBuseDragomir/university-projects/blob/3c55d39003ac97e27c742abb477c1fa68d339b0e/pic24-microcontroller-vhdl/README.md)**
-   - Design of a PIC24 microcontroller using VHDL.
-   - Detailed description of the signals and roles of the blocks involved in the microcontroller design.
-
-7. **[Plant Collection Manager](https://github.com/AlexBuseDragomir/university-projects/blob/3c55d39003ac97e27c742abb477c1fa68d339b0e/plant-collection-manager/README.md)**
+6. **[Plant Collection Manager](https://github.com/AlexBuseDragomir/university-projects/blob/3c55d39003ac97e27c742abb477c1fa68d339b0e/plant-collection-manager/README.md)**
    - A C language project managing records of decorative plants.
    - Functions include adding, deleting, and sorting plant records by criteria.
 
-8. **[Santa Claus Workshop Multithreading](https://github.com/AlexBuseDragomir/university-projects/blob/3c55d39003ac97e27c742abb477c1fa68d339b0e/santa-claus-workshop-multithreading/README.md)**
+7. **[Santa Claus Workshop Multithreading](https://github.com/AlexBuseDragomir/university-projects/blob/3c55d39003ac97e27c742abb477c1fa68d339b0e/santa-claus-workshop-multithreading/README.md)**
    - A Java concurrency project simulating Santa Claus's workshop.
    - Features toy factories, elves, and reindeer working together to create and deliver gifts.
 
-9. **[Simple Auto Service Application](https://github.com/AlexBuseDragomir/university-projects/blob/3c55d39003ac97e27c742abb477c1fa68d339b0e/simple-auto-service-application/README.md)**
+8. **[Simple Auto Service Application](https://github.com/AlexBuseDragomir/university-projects/blob/3c55d39003ac97e27c742abb477c1fa68d339b0e/simple-auto-service-application/README.md)**
    - A Python application simulating an auto service unit with five workstations.
    - Manages car maintenance and repair work with optimization for processing as many cars as possible.
 
-10. **[Traveling Salesman Problem](https://github.com/AlexBuseDragomir/university-projects/blob/3c55d39003ac97e27c742abb477c1fa68d339b0e/traveling-salesman-problem/README.md)**
+9. **[Traveling Salesman Problem](https://github.com/AlexBuseDragomir/university-projects/blob/3c55d39003ac97e27c742abb477c1fa68d339b0e/traveling-salesman-problem/README.md)**
     - A college project solving the Traveling Salesman Problem using C++ and Java.
     - Implements Recursive Best First Search and A* algorithms.
 
-11. **[Utility for Operations with Large Numbers](https://github.com/AlexBuseDragomir/university-projects/blob/3c55d39003ac97e27c742abb477c1fa68d339b0e/utility-for-operations-with-large-numbers/README.md)**
+10. **[Utility for Operations with Large Numbers](https://github.com/AlexBuseDragomir/university-projects/blob/3c55d39003ac97e27c742abb477c1fa68d339b0e/utility-for-operations-with-large-numbers/README.md)**
     - A C project for performing operations with large numbers.
     - Defines a custom data type and includes functions for addition, subtraction, multiplication, division, and square root operations.
