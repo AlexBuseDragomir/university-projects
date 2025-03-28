@@ -1,137 +1,116 @@
 # Santa Claus Workshop Project
 
-I. Christmas is just around the corner! Santa Klaus and his staff (elves and reindeers) are preparing for
-another wonderful Christmas that brings joy and gifts to all children around the world.
-But Santa Klaus is in need for some help!
-He owns a workshop that may contain multiple factories (every year he recreates the factories). He has
-elves in the factories creating toys, he has reindeers awaiting the toys to wrap them up in gifts and he
-desperately needs a workshop running (because his older workshop manager left). The workshop plan
-has some rules that will ensure that all gifts are created in due-time and that no child is left without a
-present (would be such a pity).
-He found out from us that you are all ready to help him and implement a factory plan by using
-concurrency in Java (he knows already you are all experts in the field) that will provide the needed help.
-Now below you can find some information that we know and found out from Santa about the workshop
-and things that are needed to be done:
+## I. Introduction & Problem Statement
 
-II. Things that Santa told us
-He instructed us to tell you the following things that he has in his workshop:  
+Christmas is just around the corner! Santa Klaus and his staff (**Elves** and **Reindeers**) are preparing for another wonderful Christmas that brings joy and gifts to all children around the world.
 
-1. He has multiple toys factories:
-- Random number of factories (between 2-5) that create toys (he doesn’t know how many are
-needed until your factory plan is created and runs)
-- All factories are in matrix like form (random NxN, where N is between 100-500)
-- Each factory contains an array list with elves
-- Every few seconds the factory will ask all its elves their position in the factory
-- There can be no more than N/2 number of elves in a factory  
+But Santa Klaus is in need of some help!
 
-2. He has elves. Elves are really important; they create all the nice toys. Here’s what he told us about
-them:
-- Elves are spawning randomly in each factory at a random place in the factory (random time
-between 500-1000 milliseconds)
-- When elves are spawned randomly they need to tell the factory that they are there
-- No two elves can be on the same position
-- Each elf works independently of any other elf
-- Elves create gifts by:
-o Moving in one direction (left, right, up, down)
-o When they reach a wall of the factory they move in any other direction than the wall’s
-o Once they move they also create the gift
-o If an elf is surrounded by other elves and cannot move it stops for a random time
-(between 10-50 milliseconds)
-o When the gift is created they update their factory to know what gift they created and
-the factory will ask all elves to pass on the information on their location to give it to
-Santa
-o After the elf creates a gift, he needs to rest for a short while (30 milliseconds)
-*) They are really fast
-o Elves will work like in... forever (well, at least until December 25th. As such they don't
-need to stop.   
+He owns a workshop that may contain multiple **Factories** (he recreates them every year). He has **Elves** in the factories creating toys, and **Reindeers** awaiting the toys to wrap them up as gifts. He desperately needs a workshop running because his older workshop manager left.
 
-3. He also has reindeers:
-- Reindeers await to receive gifts from the factory. Reindeers are available in the workshop
-- They can always read from the factories the number of gifts (and which gifts), but they won’t be
-allowed access when elves notify the factories about new gifts or when the factory itself asks
-the elves about new gifts
-- A maximum of 10 reindeers can read from a factory at a time
-- A random time must pass between two consecutive factory readings
-- Reindeers will put all gifts through a pipe to give to Santa
-- Multiple reindeers at the same time put the gifts while Santa reads by itself all gifts
-- Reindeers are known from the beginning (there are more than 8, because Santa needs backup).  
+The workshop plan has some rules to ensure all gifts are created on time and no child is left without a present. He heard you are experts in Java concurrency and ready to help him implement a factory plan.
 
-4. The main Santa’s Workshop will do the following:
-- this workshop contains all factories
-- it creates the factories
-- it also spawns elves and gives them a random factory to work in (remember that each elf is
-responsible to register himself to the factory)
+Below is the information Santa provided about the workshop and the tasks involved.
 
-III. Things that are necessary
-Please note that the (concurrent) control flow in this example is rather subtle. The moving of elves and
-reporting to the factory is initiated independently by each of the elves, as each of them is running a
-separate thread of control.
-Because of that, different elves may execute the move action and factory reporting concurrently.
-Concurrent factory reporting has to also be synchronized.
-But calling report also triggers calling the individual report method of all the elves registered with the
-factory. This again has to be properly taken care of, because both report and move methods are
-synchronized, which means that they will not be called concurrently for a given object.
+## II. Details from Santa
 
-IV. Some hints
-Santa knows you can help him. He knows that you have in your tool belt the following concurrent
-notions that you can help him with:
-- Semaphores, Monitors and Locks (he knows that you will fairly use all of them)
-- Threads are really important for him. He even said that each of his elf can be a separate thread in your
-factory plan implementation
-- He wants them to communicate: the elves create the gifts and the reindeers receive them and wrap
-them up in nice packages to give to Santa to deliver
-- And Santa dearly wants the reindeers to deliver him the gifts to his office through TCP/IP (he found out
-this is good). If he receives all gifts then he can create the list for the children (don't miss any gift)
+### 1. Toy Factories
 
-V. Extra tasks
-1. You can retire an elf
-Your first task is to add still another thread to your program that retires the elves at random times (i.e.
-with short random delays in between). But the elves should be retired in random order. Retiring an elf
-means that its run method must terminate. This should be achieved by making the loop terminate
-normally and NOT by calling the deprecated method to stop a thread. Further, the elf must be removed
-from the factory (in a thread-safe way similar to adding an elf to a factory). After this has been done the
-garbage collector in the run-time system will eventually reclaim the space allocated for the elf object.
-To solve the problem you can make use of a semaphore that the elves try to acquire in order to “get
-permission to retire”. The semaphore is initially zero and then released a number of times in a thread
-started in main. Note that it is very useful to try to acquire the semaphore, using its tryAcquire method.
-Implement this and test your program. Make sure that you understand how the design makes the
-retiring order unpredictable. If you want, you can change the behavior of the program further so that
-retired elves are respawn after some (random) time.   
+* A random number of **Factories** (between 2-5) will create toys. The exact number isn't known until the plan runs.
+* All factories are structured like a matrix (random N x N, where N is between 100-500).
+* Each factory contains a list of its **Elves**.
+* Every few seconds, the factory will query all its **Elves** for their current position.
+* There can be no more than N/2 **Elves** in a single factory.
 
-2. You can give an elf time to sleep (because you’ve noticed that he/she is really tired)
-Now return to the original version of the program (make a new directory and reuse the initial set of
-classes you implemented).
-You must now modify the program to achieve the following behavior: When an elf after one of its moves
-finds itself in the diagonal area of the world (i.e. where x is very close to y), it will “go to sleep”, i.e. stop
-moving. Note that an elf may jump over the diagonal area in one move; this will not cause it to sleep.
-When all elves have frozen at the diagonal, they will all wake up and continue moving until they sleep
-again on the diagonal. This moving/sleeping continues forever.
-You should recognize this as a form of barrier synchronization that can be achieved using N + 1
-semaphores: one common barrier semaphore, which elf threads release when they reach the
-synchronization point, and an array of “continue” semaphores, indexed by thread, which threads
-acquire in order to continue beyond the barrier.
-A special barrier synchronization process is also needed, which repeatedly acquire the barrier
-semaphore N times, followed by releasing all the continue semaphores.   
+### 2. Elves
 
-3. Sleeping elves revisited
-The package java.util.concurrent includes the class CyclicBarrier, which provides more convenient
-means to achieve barrier synchronization. Rewrite the program from the previous exercise using this
-class instead of semaphores.   
+**Elves** are crucial as they create the toys.
 
-4. Your own cycle barrier
-Now for a harder exercise: implement the body of your own class CyclicBarrier which provides similar
-features as the Java class of the same name. But we are content with a simpler version with the
-following spec:
-public class CyclicBarrier {
-public CyclicBarrier(int parties);
-public void await();
-}  
+* **Elves** spawn randomly in each factory at a random location and at a random time (between 500-1000 milliseconds).
+* When an **Elf** spawns, it must register itself with its factory.
+* No two **Elves** can occupy the same position.
+* Each **Elf** works independently.
+* **Elves** create gifts by:
+    * Moving one step in a direction (left, right, up, down).
+    * When hitting a factory wall, they change direction (any direction except towards the wall).
+    * A gift is created after each move.
+    * If an **Elf** is surrounded by other **Elves** and cannot move, it pauses for a random time (between 10-50 milliseconds).
+    * When a gift is created, the **Elf** notifies its factory about the gift. The factory then asks all **Elves** for their locations to report to Santa.
+    * After creating a gift, the **Elf** rests for a short while (30 milliseconds).
+        * *They are really fast!*
+* **Elves** work continuously (until December 25th, so they don't need an explicit stop condition in the main simulation).
 
-The parameter parties are the number of threads that need to reach the barrier before they are all
-allowed to continue. Write the whole class and then use it to solve the sleeping elf problem again.
-Hint: We cannot follow the array-of-semaphores approach directly, since that would require await to
-have a parameter i indicating the index of the semaphore on which to block. Instead, one could try to
-use a single semaphore on which all processes block and an integer variable counting how many
-processes have reached the barrier. But this integer variable is shared, so we need to protect updates to
-it using a second, mutex semaphore. We cannot use the Java synchronized locking instead of the mutex
-semaphore. Why?
+### 3. Reindeers
+
+* **Reindeers** are in the workshop, waiting to receive gifts from the **Factories**.
+* They can always read the number and type of gifts from the **Factories**, *except* when **Elves** are notifying the factory about new gifts or when the factory is actively querying **Elves**.
+* A maximum of 10 **Reindeers** can read from a single factory simultaneously.
+* There must be a random time interval between consecutive readings from the same factory by a **Reindeer**.
+* **Reindeers** put all collected gifts through a "pipe" to Santa.
+* Multiple **Reindeers** can send gifts concurrently, while Santa reads them individually.
+* The number of **Reindeers** is known from the start (more than 8, for backup).
+
+### 4. Main Santa's Workshop
+
+* The main workshop entity contains all the **Factories**.
+* It is responsible for creating the **Factories**.
+* It also spawns **Elves** and assigns them to a random factory. (Remember: each **Elf** is responsible for registering itself with its assigned factory).
+
+## III. Concurrency Considerations
+
+* The control flow is subtle. **Elf** movement and reporting are initiated independently by each **Elf** (running in its own thread).
+* Different **Elves** may move and report to the factory concurrently.
+* Concurrent factory reporting *must* be synchronized.
+* Calling the factory's `report` method also triggers calls to the individual `report` methods of all registered **Elves**. This interaction needs careful handling, especially since both `report` and `move` methods are likely `synchronized`, preventing concurrent calls *on the same object*.
+
+## IV. Technical Hints
+
+Santa suggests using the following Java concurrency tools:
+
+* **Semaphores**, **Monitors**, and **Locks** (use them appropriately).
+* **Threads** are essential. Each **Elf** can be implemented as a separate thread.
+* **Communication:** **Elves** produce gifts, **Reindeers** consume them and pass them to Santa.
+* **Gift Delivery:** Santa wants the **Reindeers** to deliver the gifts to his office via **TCP/IP**. Ensure no gifts are missed so Santa can create his list.
+
+## V. Extra Tasks
+
+### 1. Retire an Elf
+
+* Add a thread that retires **Elves** at random times and in random order.
+* Retiring means an **Elf**'s `run` method should terminate normally (do *not* use deprecated `stop()` methods).
+* The retired **Elf** must be removed from the factory in a thread-safe manner.
+* The garbage collector will eventually reclaim the memory.
+* **Hint:** Use a **Semaphore** (initially 0). **Elves** can periodically `tryAcquire` this semaphore to get "permission to retire". A separate thread releases the semaphore randomly.
+* *Optional:* Modify the program so retired **Elves** are respawned after some random time.
+
+### 2. Sleeping Elves (Using Semaphores)
+
+* **(Start from the original implementation)** Modify the program so that when an **Elf** finds itself on the factory's diagonal (where its x-coordinate is close to its y-coordinate) after a move, it "goes to sleep" (stops moving).
+* *Note:* An **Elf** jumping *over* the diagonal in one move does not trigger sleep.
+* When *all* **Elves** in a factory are asleep on the diagonal, they *all* wake up simultaneously and resume moving.
+* This cycle repeats forever.
+* **Hint:** Recognize this as barrier synchronization. Implement it using N+1 **Semaphores**:
+    * One common barrier semaphore (released by **Elves** reaching the barrier).
+    * An array of 'continue' semaphores (one per **Elf**), acquired by **Elves** to proceed past the barrier.
+    * A special barrier synchronization process/thread is needed to repeatedly acquire the barrier semaphore N times and then release all 'continue' semaphores.
+
+### 3. Sleeping Elves Revisited (Using `java.util.concurrent.CyclicBarrier`)
+
+* Rewrite the solution from Extra Task 2 using the `java.util.concurrent.CyclicBarrier` class instead of manual semaphore implementation.
+
+### 4. Your Own Cyclic Barrier
+
+* **(Harder Exercise)** Implement your own simplified `CyclicBarrier` class with the following structure:
+
+    ```java
+    public class CyclicBarrier {
+        public CyclicBarrier(int parties);
+        public void await();
+    }
+    ```
+
+* `parties` is the number of threads that must reach the barrier.
+* `await()` causes a thread to wait until all `parties` threads have called `await()`.
+* Use this custom class to solve the sleeping elf problem again.
+* **Hint:** You might use a counter for arrived threads (protected by a mutex **Semaphore**) and a single gate **Semaphore** on which threads wait.
+* **Question:** Why can't you use Java's `synchronized` keyword instead of the mutex **Semaphore** for protecting the counter in this specific implementation pattern? (Think about where threads need to block and what `synchronized` locks).
