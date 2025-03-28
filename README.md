@@ -8,7 +8,7 @@ They do not adhere to commercial security standards, as that is not their primar
 
 ## Projects
 
-1. **[Bank Account Manager](https://github.com/AlexBuseDragomir/university-projects/blob/3c55d39003ac97e27c742abb477c1fa68d339b0e/bank-account-manager/README.md)**
+1. **[Bank Account Manager](https://github.com/AlexBuseDragomir/university-projects/bank-account-manager/README.md)**
    - **BAT** is a college desktop application for managing bank accounts and performing transactions.
    - Features include account verification, GUI, security measures, database server, and web server.
    - Users can view account information, change addresses and passwords, make transactions, and view transaction history.
