@@ -1,7 +1,9 @@
 # Santa Claus Workshop Project
 
-**NOTE:** This was never fully implemented, the current structure can be considered a draft implementation.   
-It contains the main code infrastructure, but it is not properly syncronized.
+## Author's note:
+The current project structure can be considered a draft implementation.     
+It contains the main code infrastructure, but it is not properly syncronized.   
+Never got the chance to complete this work.
 
 ## I. Introduction & Problem Statement
 
