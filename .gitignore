@@ -1,0 +1,117 @@
+# ========================
+# OS & General
+# ========================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+*.log
+*.tmp
+
+# ========================
+# IDEs & Editors
+# ========================
+# VS Code
+.vscode/
+*.code-workspace
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Eclipse
+.classpath
+.project
+.settings/
+.metadata/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# ========================
+# Java & Maven
+# ========================
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+# Crash logs
+hs_err_pid*
+replay_pid*
+
+# ========================
+# C# / .NET Core (Ecotourism Website)
+# ========================
+bin/
+obj/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+appsettings.Development.json
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userprefs
+*.xproj
+*.user
+
+# ========================
+# C / C++ (Traveling Salesman, Large Numbers)
+# ========================
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Executables
+*.exe
+*.out
+*.app
+*.dll
+*.so
+*.dylib
+
+# ========================
+# Python (Auto Service App)
+# ========================
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+
+# ========================
+# LaTeX (Documentation)
+# ========================
+*.aux
+*.glo
+*.idx
+*.ist
+*.lof
+*.lot
+*.out
+*.toc
+*.synctex.gz
+*.pdf
+
+# ========================
+# Specific Project cleanup
+# ========================
+# Ignore archives unless they are intentional assets
+*.zip
+*.rar
+*.tar.gz
+
+# Specific generated files found in your upload
+test.out
