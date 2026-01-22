@@ -1,3 +1,6 @@
+# DISCLAIMER: All names and license plates used in this simulation are fictional.
+# Any resemblance to real persons or vehicles is purely coincidental.
+
 # we import all class definitions and functions from the module
 from Module import *
 
@@ -6,43 +9,43 @@ from Module import *
 
 work_order1 = [("change wheel", (0, 30, 0)), ("repair engine", (2, 45, 0))]
 car_report1 = [0, 0, 0, 0, 0]
-car1 = Car("DJ15TRA", "Sedan", (8, 5, 0), work_order1, car_report1)
+car1 = Car("PLATE-01", "Sedan", (8, 5, 0), work_order1, car_report1)
 
 work_order2 = [("inflate wheel", (0, 15, 0)), ("change oil", (0, 45, 0))]
 car_report2 = [0, 0, 0, 0, 0]
-car2 = Car("DJ85SFA", "SUV", (9, 15, 0), work_order2, car_report2)
+car2 = Car("PLATE-02", "SUV", (9, 15, 0), work_order2, car_report2)
 
 work_order3 = [("paint/repaint car", (3, 30, 0)), ("repair distribution", (2, 30, 0))]
 car_report3 = [0, 0, 0, 0, 0]
-car3 = Car("MH21WWX", "Hatchback", (8, 50, 0), work_order3, car_report3)
+car3 = Car("PLATE-03", "Hatchback", (8, 50, 0), work_order3, car_report3)
 
 work_order4 = [("repair direction", (1, 30, 0)), ("change wheel", (0, 30, 0))]
 car_report4 = [0, 0, 0, 0, 0]
-car4 = Car("VL30HCL", "Pickup truck", (9, 0, 0), work_order4, car_report4)
+car4 = Car("PLATE-04", "Pickup truck", (9, 0, 0), work_order4, car_report4)
 
 work_order5 = [("repair cooling system", (1, 10, 0)), ("change battery", (0, 20, 0))]
 car_report5 = [0, 0, 0, 0, 0]
-car5 = Car("DJ05RAX", "Sedan", (9, 20, 0), work_order5, car_report5)
+car5 = Car("PLATE-05", "Sedan", (9, 20, 0), work_order5, car_report5)
 
 work_order6 = [("repair exhaust system", (1, 30, 0)), ("repair engine", (2, 45, 0))]
 car_report6 = [0, 0, 0, 0, 0]
-car6 = Car("DJ10SEA", "Convertible", (9, 35, 0), work_order6, car_report6)
+car6 = Car("PLATE-06", "Convertible", (9, 35, 0), work_order6, car_report6)
 
 work_order7 = [("repair direction", (1, 30, 0)), ("repair braking system", (2, 0, 0))]
 car_report7 = [0, 0, 0, 0, 0]
-car7 = Car("DJ99YYY", "Minivan", (10, 25, 0), work_order7, car_report7)
+car7 = Car("PLATE-07", "Minivan", (10, 25, 0), work_order7, car_report7)
 
 work_order8 = [("repair cooling system", (1, 10, 0)), ("inflate wheel", (0, 15, 0))]
 car_report8 = [0, 0, 0, 0, 0]
-car8 = Car("DJ55SPR", "Sports car", (10, 55, 0), work_order8, car_report8)
+car8 = Car("PLATE-08", "Sports car", (10, 55, 0), work_order8, car_report8)
 
 work_order9 = [("change oil", (0, 45, 0)), ("repair distribution", (2, 30, 0))]
 car_report9 = [0, 0, 0, 0, 0]
-car9 = Car("GJ19BEN", "Hatchback", (10, 21, 0), work_order9, car_report9)
+car9 = Car("PLATE-09", "Hatchback", (10, 21, 0), work_order9, car_report9)
 
 work_order10 = [("change battery", (0, 20, 0)), ("paint/repaint car", (3, 30, 0))]
 car_report10 = [0, 0, 0, 0, 0]
-car10 = Car("DJ15TRA", "Truck", (10, 56, 0), work_order10, car_report10)
+car10 = Car("PLATE-10", "Truck", (10, 56, 0), work_order10, car_report10)
 
 # we assume that each service will have available the full list of services
 list_of_services1 = [("change wheel", (0, 30, 0)), ("inflate wheel", (0, 15, 0)), ("repair engine", (2, 45, 0))]
@@ -65,11 +68,11 @@ current_car = Car()
 # initially there is no utilisation report available
 utilisation_report = [(0, 0, 0), (0, 0, 0)]
 
-unit1 = RepairUnit("John Mathews", services, car_queue, current_car, utilisation_report)
-unit2 = RepairUnit("Michael Bolt", services, car_queue, current_car, utilisation_report)
-unit3 = RepairUnit("Spike Roberts", services, car_queue, current_car, utilisation_report)
-unit4 = RepairUnit("Steve Russel", services, car_queue, current_car, utilisation_report)
-unit5 = RepairUnit("Logan Wilson", services, car_queue, current_car, utilisation_report)
+unit1 = RepairUnit("Mechanic 1", services, car_queue, current_car, utilisation_report)
+unit2 = RepairUnit("Mechanic 2", services, car_queue, current_car, utilisation_report)
+unit3 = RepairUnit("Mechanic 3", services, car_queue, current_car, utilisation_report)
+unit4 = RepairUnit("Mechanic 4", services, car_queue, current_car, utilisation_report)
+unit5 = RepairUnit("Mechanic 5", services, car_queue, current_car, utilisation_report)
 
 # we create a list containing all cars
 car_list = [car1, car2, car3, car4, car5, car6, car7, car8, car9, car10]
